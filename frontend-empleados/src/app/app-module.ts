@@ -1,6 +1,11 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
+//importar
+
+
+
+
 import { App } from './app';
 import { Empleado } from './empleado/empleado';
 
