@@ -1,7 +1,10 @@
-import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app/app-module';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app-module'; // Asegúrate de usar app-module
+import { provideHttpClient, withFetch } from '@angular/common/http'; 
 
-platformBrowser().bootstrapModule(AppModule, {
-  
+platformBrowserDynamic().bootstrapModule(AppModule, {
+  providers: [
+    provideHttpClient(withFetch()) // Provee la funcionalidad HTTP
+  ]
 })
   .catch(err => console.error(err));

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Empleado } from './empleado';
+import { Empleado } from './empleado.service';
 
 describe('Empleado', () => {
   let service: Empleado;
@@ -14,3 +14,4 @@ describe('Empleado', () => {
     expect(service).toBeTruthy();
   });
 });
+

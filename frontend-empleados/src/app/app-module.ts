@@ -1,27 +1,22 @@
-import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+// ¡IMPORTANTE! ELIMINAR la línea: import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';           // <-- Necesario para ngModel
 
-//importar
-
-
-
-
-import { App } from './app';
-import { Empleado } from './empleado/empleado';
+import { AppComponent } from './app.component';
+import { EmpleadoComponent } from './empleado/empleado.component'; 
 
 @NgModule({
   declarations: [
-    App,
-    Empleado
+    AppComponent,
+    EmpleadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // ELIMINAR HttpClientModule de aquí.
+    FormsModule       // <-- Mantener
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [App]
+  providers: [], // <-- Dejar vacío
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
