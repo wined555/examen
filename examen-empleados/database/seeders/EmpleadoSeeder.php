@@ -23,6 +23,8 @@ class EmpleadoSeeder extends Seeder
             ['nombre' => 'Javier', 'apellido' => 'Díaz', 'correo' => 'javier.d@empresa.com', 'salario' => 51000.90, 'created_at' => $now, 'updated_at' => $now],
             ['nombre' => 'Laura', 'apellido' => 'Pérez', 'correo' => 'laura.p@empresa.com', 'salario' => 44000.00, 'created_at' => $now, 'updated_at' => $now],
             ['nombre' => 'Miguel', 'apellido' => 'Ruiz', 'correo' => 'miguel.r@empresa.com', 'salario' => 58000.30, 'created_at' => $now, 'updated_at' => $now],
+
+            
         ]);
     }
 }
