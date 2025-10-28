@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Empleado extends Model
 {
     use HasFactory;
+
+    // Campos que se pueden asignar con Request::all()
+    protected $fillable = [
+        'nombre',
+        'apellido',
+        'correo',
+        'salario',
+    ];
 }
